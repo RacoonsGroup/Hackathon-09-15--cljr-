@@ -24,6 +24,4 @@
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (POST "/about" {params :params} (about-post params))
-  (GET "/test-chart-page" [] (test-chart-page))
-  )
-
+  (GET "/test-chart-page" [] (test-chart-page)))
