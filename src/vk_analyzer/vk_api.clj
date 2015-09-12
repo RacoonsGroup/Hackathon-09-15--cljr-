@@ -10,5 +10,9 @@
   ([method params access-token]
    (str "https://api.vk.com/method/" method "?v=5.37" params "&access_token=" access-token)))
 
+(defn get-body [path]
+  ((client/get path) :body))
+
+
 (defn get-user[user-id]
-  (client/get (api-path "users.get" (str "&user_ids=" user-id))))
+  (get-body (api-path "users.get" (str "&user_ids=" user-id))))
