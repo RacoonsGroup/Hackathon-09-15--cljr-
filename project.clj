@@ -21,7 +21,8 @@
                  [org.clojure/tools.nrepl "0.2.10"]
                  [org.webjars/bootstrap "3.3.5"]
                  [org.webjars/jquery "2.1.4"]
-                 [org.immutant/web "2.1.0"]]
+                 [org.immutant/web "2.1.0"]
+                 [incanter "1.5.6"]]
 
   :min-lein-version "2.0.0"
   :uberjar-name "vk-analyzer.jar"
