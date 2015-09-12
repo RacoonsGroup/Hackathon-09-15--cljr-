@@ -15,7 +15,7 @@
   (layout/render "about.html"))
 
 (defn about-post [{:keys [user-id keywords]}]
-  	(layout/render "about-post.html" {:response (vk-api/get-user user-id)}))
+  	(layout/render "about-post.html" {:response (vk-api/get-user {:user_id user-id})}))
 
 (defn test-chart-page []
   (layout/render
