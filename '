@@ -1,0 +1,14 @@
+Merge branch 'master' of github.com:RacoonsGroup/Hackathon-09-15--cljr-
+
+# By Kirill Zonov
+# Via Kirill Zonov
+* 'master' of github.com:RacoonsGroup/Hackathon-09-15--cljr-:
+  small fix for order of defn
+  added iterator for post collection + minor changes
+  merged
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
