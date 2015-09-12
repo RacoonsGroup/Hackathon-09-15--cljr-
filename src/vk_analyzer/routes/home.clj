@@ -13,7 +13,7 @@
 (defn about-page []
   (layout/render "about.html"))
 
-(defn analyze-likes [{:keys [domain keywords]}]
+(defn analyze-likes [{:keys [id domain keywords]}]
   	(layout/render "analyze-likes.html" {:data (charts/analyze-data (vk-api/get-wall {:domain domain :count 3}))}))
 
 (defroutes home-routes

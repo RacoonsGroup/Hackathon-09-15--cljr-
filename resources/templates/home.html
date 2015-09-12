@@ -1,22 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Welcome to vk-analyzer</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="jumbotron">
+        <h1>Welcome to vk-analyzer</h1>
+        <p>Time to start building your site!</p>
+        <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <form action="/analyze-likes" method="POST" role="form">
+        {% csrf-field %}
+        <div class="form-group">
+          <label for="id">User/Group ID:</label>
+          <input id="id" type="text" placeholder="2550505" name="id" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="domain">User/Group domain:</label>
+          <input id="domain" type="text" placeholder="mdk" name="domain" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="userid">Keywords (will be implemented soon...):</label>
+          <input type="text" placeholder="kotiki" name="keywords" class="form-control" />
+          <p class="help-block">separated by commas.</p>
+        </div>
+        <input type="submit" value="(cljr) team, analyse it!" class="btn btn-lg btn-primary" />
+      </form>
+    </div>
   </div>
-
-  <form action="/analyze-likes" method="POST" role="form" class="form-horizontal">
-    {% csrf-field %}
-    <div class="form-group">
-      <label for="userid">Group/user domain:</label>
-      <input type="text" placeholder="mdk" name="domain" />
-    </div>
-    <div class="form-group">
-      <label for="userid">Keywords (will be implemented soon...):</label>
-      <input type="text" placeholder="котики" name="keywords" />
-      <p class="help-block">separated by commas.</p>
-    </div>
-    <input type="submit" value="(cljr) team, analyse it!" />
-  </form>
 {% endblock %}
