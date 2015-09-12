@@ -1,7 +1,8 @@
 (ns vk-analyzer.data.analyzer
 	(:require [clj-time.coerce :as coerce]
 			  [clj-time.format :as formatter]
-			  [clj-time.core :as time]))
+			  [clj-time.core :as time]
+			  [vk-analyzer.configs.global :as config]))
 
 (def hour-formatter (formatter/formatter "HH"))
 
@@ -10,11 +11,10 @@
 	(formatter/unparse hour-formatter
 		(time/from-time-zone
 			(coerce/from-long (* timestamp 1000))
-			(time/time-zone-for-offset -3))
+			(time/time-zone-for-offset config/time-zone))
 		))
 
 (defn transform-time [value]
-	(println (get-hour (value 0)) )
 	[(get-hour (value 0))
 		(value 1)])
 
