@@ -41,3 +41,6 @@
 					(hours (str index)) ; добавляем их
 					0)) ; иначе просто 0
 			(vec (range 24)))))
+
+(defn prepare-for-spotter [data]
+  )
