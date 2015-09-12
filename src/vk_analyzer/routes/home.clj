@@ -16,12 +16,7 @@
 (defn analyze-likes [{:keys [domain keywords]}]
   	(layout/render "analyze-likes.html" {:data (charts/analyze-data (vk-api/get-wall {:group_id domain :count 3}))}))
 
-; (defn test-chart-page []
-;   (layout/render
-;     "test-chart-page.html" {:response (charts/get-data)}))
-
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (POST "/analyze-likes" {params :params} (analyze-likes params)))
-  ; (GET "/test-chart-page" [] (test-chart-page)))
