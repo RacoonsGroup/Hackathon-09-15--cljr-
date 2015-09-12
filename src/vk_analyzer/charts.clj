@@ -10,4 +10,4 @@
   (vec (map #(vector (% "date") ((% "likes") "count")) (parse-response data))))
 
 (defn analyze-data [data]
-	(vec (analyzer/add-hour (evaluate-likes-count data))))
+	(vec (analyzer/get-hours-array (evaluate-likes-count data))))

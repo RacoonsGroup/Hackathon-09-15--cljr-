@@ -31,7 +31,7 @@
 	(println (into (sorted-map) (vec (map genefucker (grouped params)))))
 	(into (sorted-map) (vec (map genefucker (grouped params)))))
 
-(defn add-hour [params]
+(defn get-hours-array [params]
 	(let [hours (analyze params)]
 		(map-indexed (fn [index, item] (if (hours (str index))
 			(hours (str index))
