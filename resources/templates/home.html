@@ -6,6 +6,13 @@
     <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
   </div>
 
+  <form action="/about" method="POST">
+    {% csrf-field %}
+    <input name="firstname" />
+    <input name="secondname" />
+    <input type="submit" />
+  </form>
+
   <div class="row">
     <div class="span12">
     {{docs|markdown}}
