@@ -4,11 +4,12 @@
             [ring.util.http-response :refer [ok]]
             [clojure.java.io :as io]
             [vk-analyzer.charts :as charts]
-            [clj-http.client :as client]))
+            [clj-http.client :as client]
+            [vk-analyzer.posts-analyzer :as analyzer]))
 
 (defn home-page []
   (layout/render
-    "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+    "home.html" {:array (analyzer/analyze [[1441923785 500] [1442068518 200] [1442068518 400]])}))
 
 (defn about-page []
   (layout/render "about.html"))

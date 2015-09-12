@@ -23,7 +23,8 @@
                  [org.webjars/jquery "2.1.4"]
                  [org.immutant/web "2.1.0"]
                  [incanter "1.5.6"]
-                 [clj-http "2.0.0"]]
+                 [clj-http "2.0.0"]
+                 [clj-time "0.11.0"]]
 
   :min-lein-version "2.0.0"
   :uberjar-name "vk-analyzer.jar"

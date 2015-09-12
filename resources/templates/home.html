@@ -6,6 +6,8 @@
     <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
   </div>
 
+  {{ array | json }}
+
   <form action="/about" method="POST" role="form" class="form-horizontal">
     {% csrf-field %}
     <div class="form-group">
