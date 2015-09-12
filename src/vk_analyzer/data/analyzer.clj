@@ -1,4 +1,4 @@
-(ns vk-analyzer.posts-analyzer
+(ns vk-analyzer.data.analyzer
 	(:require [clj-time.coerce :as coerce]
 			  [clj-time.format :as formatter]
 			  [clj-time.core :as time]))

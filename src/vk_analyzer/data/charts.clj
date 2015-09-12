@@ -1,7 +1,7 @@
-(ns vk-analyzer.charts
+(ns vk-analyzer.data.charts
   (:require [cheshire.core :refer :all]
             [clj-http.client :as client]
-            [vk-analyzer.posts-analyzer :as analyzer]))
+            [vk-analyzer.data.analyzer :as analyzer]))
 
 (defn parse-response "converts string to json and trim useless info" [data]
   (((parse-string data) "response") "items"))

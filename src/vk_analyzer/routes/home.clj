@@ -3,8 +3,8 @@
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :refer [ok]]
             [clojure.java.io :as io]
-            [vk-analyzer.charts :as charts]
-            [vk-analyzer.vk-api :as vk-api]
+            [vk-analyzer.data.charts :as charts]
+            [vk-analyzer.data.vk-api :as vk-api]
             [clj-http.client :as client]))
 
 (defn home-page []
