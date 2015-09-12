@@ -12,7 +12,7 @@
     "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
 
 (defn about-page []
-  (layout/render "about.html"))
+  (println (vk-api/get-user "1")))
 
 (defn about-post [{:keys [user-id keywords]}]
   	(layout/render "about-post.html" {:response ((vk-api/get-user user-id) :body)}))
