@@ -4,13 +4,13 @@
 
 (def hour-formatter (formatter/formatter "HH"))
 
-(defn get-hour [timestamp] 
+(defn get-hour [timestamp]
 	;  Учитывать временную зону
-	(formatter/unparse hour-formatter 
+	(formatter/unparse hour-formatter
 		(coerce/from-long (* timestamp 1000))))
 
 (defn transform-time [value]
-	[(get-hour (value 0)) 
+	[(get-hour (value 0))
 		(value 1)])
 
 (defn average
@@ -28,7 +28,6 @@
 	[(elem 0) (average (map second (elem 1)))])
 
 (defn analyze [params]
-	(println (into (sorted-map) (vec (map genefucker (grouped params)))))
 	(into (sorted-map) (vec (map genefucker (grouped params)))))
 
 (defn get-hours-array [params]
