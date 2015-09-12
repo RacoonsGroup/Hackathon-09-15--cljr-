@@ -18,11 +18,12 @@
 
 (defn test-chart-page []
   (layout/render
-    "test-chart-page.html"))
+    "test-chart-page.html" {:data (charts/get-data)}))
 
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
-  (POST "/about" {params :params} (about-post params)))
-  (GET "/test-chart-page" [] (test-chart-page)))
+  (POST "/about" {params :params} (about-post params))
+  (GET "/test-chart-page" [] (test-chart-page))
+  )
 
