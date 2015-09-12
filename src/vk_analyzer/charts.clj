@@ -1,6 +1,7 @@
 (ns vk-analyzer.charts
   (:require [cheshire.core :refer :all]
-            [clj-http.client :as client]))
+            [clj-http.client :as client]
+            [vk-analyzer.posts-analyzer :as analyzer]))
 
 (defn parse-response "converts string to json and trim useless info" [data]
   (((parse-string data) "response") "items"))
@@ -9,5 +10,4 @@
   (vec (map #(vector (% "date") ((% "likes") "count")) (parse-response data))))
 
 (defn analyze-data [data]
-  (evaluate-likes-count data)
-  [28, 48, 40, 19, 86, 27, 50])
+	(vec (analyzer/add-hour (evaluate-likes-count data))))

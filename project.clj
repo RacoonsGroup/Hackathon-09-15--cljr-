@@ -25,6 +25,7 @@
                  [incanter "1.5.6"]
                  [clj-http "2.0.0"]
                  [cheshire "5.5.0"]]
+                 [clj-time "0.11.0"]]
 
   :min-lein-version "2.0.0"
   :uberjar-name "vk-analyzer.jar"
