@@ -9,7 +9,7 @@
 
 (defn home-page []
   (layout/render
-    "home.html" {:array (analyzer/analyze [[1441923785 500] [1442068518 200] [1442068518 400]])}))
+    "home.html" {:array (vec (analyzer/add-hour [[1441923785 500] [1442068518 200] [1442068518 400]]))}))
 
 (defn about-page []
   (layout/render "about.html"))

@@ -24,9 +24,19 @@
 (defn grouped [params]
 	(group-by first (map transform-time params)))
 
+(defn genefucker [elem]
+	[(elem 0) (average (map second (elem 1)))])
+
 (defn analyze [params]
-	(println (grouped params))
-	(grouped params))
+	(println (into (sorted-map) (vec (map genefucker (grouped params)))))
+	(into (sorted-map) (vec (map genefucker (grouped params)))))
+
+(defn add-hour [params]
+	(let [hours (analyze params)]
+		(map-indexed (fn [index, item] (if (hours (str index))
+			(hours (str index))
+			0
+			) ) (vec (range 24)))))
 
 ; (defn evaluate-likes-count "should return array of results by hour" []
 
