@@ -23,6 +23,6 @@
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
-  (POST "/about" {params :params} (about-post params)))
+  (POST "/about" {params :params} (about-post params))
   (GET "/test-chart-page" [] (test-chart-page)))
 
