@@ -13,8 +13,8 @@
 (defn about-page []
   (layout/render "about.html"))
 
-(defn analyze-likes [{:keys [group-domain keywords]}]
-  	(layout/render "analyze-likes.html" {:response (vk-api/get-group {:group_id group-domain :count 3})}))
+(defn analyze-likes [{:keys [domain keywords]}]
+  	(layout/render "analyze-likes.html" {:response (vk-api/get-wall {:group_id domain :count 3})}))
 
 (defn test-chart-page []
   (layout/render
