@@ -20,3 +20,6 @@
 
 (defn get-user[params]
   (get-body (api-path "users.get" (prepare-params params))))
+
+(defn get-wall[params]
+  (get-body (api-path "wall.get" (prepare-params params))))
