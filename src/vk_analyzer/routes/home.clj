@@ -8,14 +8,13 @@
             [clj-http.client :as client]))
 
 (defn home-page []
-  (layout/render
-    "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+  (layout/render "home.html"))
 
 (defn about-page []
   (layout/render "about.html"))
 
-(defn about-post [{:keys [user-id keywords]}]
-  	(layout/render "about-post.html" {:response (vk-api/get-wall {:domain user-id :count 3})}))
+(defn analyze-likes [{:keys [group-domain keywords]}]
+  	(layout/render "analyze-likes.html" {:response (vk-api/get-group {:group_id group-domain :count 3})}))
 
 (defn test-chart-page []
   (layout/render
@@ -24,5 +23,5 @@
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
-  (POST "/about" {params :params} (about-post params))
+  (POST "/analyze-likes" {params :params} (analyze-likes params))
   (GET "/test-chart-page" [] (test-chart-page)))

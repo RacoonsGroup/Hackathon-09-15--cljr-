@@ -6,17 +6,17 @@
     <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
   </div>
 
-  <form action="/about" method="POST" role="form" class="form-horizontal">
+  <form action="/analyze-likes" method="POST" role="form" class="form-horizontal">
     {% csrf-field %}
     <div class="form-group">
-      <label for="userid">User ID:</label>
-      <input type="text" placeholder="id2550505" name="user-id" />
+      <label for="userid">Group domain:</label>
+      <input type="text" placeholder="mdk" name="group-domain" />
     </div>
     <div class="form-group">
-      <label for="userid">Keywords:</label>
-      <input type="text" placeholder="kotiki" name="keywords" />
+      <label for="userid">Keywords (will be implemented soon...):</label>
+      <input type="text" placeholder="котики" name="keywords" />
       <p class="help-block">separated by commas.</p>
     </div>
-    <input type="submit" value="AnalyzE!" />
+    <input type="submit" value="(cljr) team, analyse it!" />
   </form>
 {% endblock %}
