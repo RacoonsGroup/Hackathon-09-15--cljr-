@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="span12">
+      <canvas id="myChart" width="400" height="400"></canvas>
+      {% script "/js/charts-for-vk.js" %}
+    </div>
+  </div>
+{% endblock %}
