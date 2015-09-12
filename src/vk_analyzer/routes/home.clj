@@ -15,7 +15,7 @@
 
 (defn analyze-likes [{:keys [id domain keywords]}]
     (let [api-data (vk-api/get-wall {:owner_id id :domain domain :count 100})]
-  	(layout/render "analyze-likes.html" {:data (charts/analyze-data api-data)})))
+  	(layout/render "analyze-likes.html" {:data (charts/analyze-data api-data) :scatter-data (charts/analyze-data-for-scatter api-data)})))
 
 (defroutes home-routes
   (GET "/" [] (home-page))

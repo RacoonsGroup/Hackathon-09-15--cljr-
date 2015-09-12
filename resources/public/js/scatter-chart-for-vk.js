@@ -1,4 +1,5 @@
 $(function () {
+    console.log(scatter_data)
     $('#container').highcharts({
         chart: {
             type: 'scatter',
