@@ -1,4 +1,4 @@
-(ns vk-analyzer.vk-api
+(ns vk-analyzer.data.vk-api
   (:require [clj-http.client :as client]))
 
 (defn default-token
