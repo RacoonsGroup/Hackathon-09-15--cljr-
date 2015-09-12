@@ -14,6 +14,10 @@ To start a web server for the application, run:
 
     lein run
 
+## get JAR
+
+	lein uberjar
+
 ## License
 
 Copyright © 2015 FIXME
