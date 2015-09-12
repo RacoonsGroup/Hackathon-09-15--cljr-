@@ -6,7 +6,11 @@
     <title>Welcome to vk-analyzer</title>
   </head>
   <body>
+    {% script "/assets/jquery/jquery.min.js" %}
+    {% script "/assets/bootstrap/js/bootstrap.min.js" %}
+    {% script "/assets/bootstrap/js/collapse.js" %}
     {% script "/js/chart.js" %}
+    {% script "/js/highcharts.js" %}
       <!-- navbar -->
       <div id="navbar">
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -46,10 +50,6 @@
     {% style "/assets/bootstrap/css/bootstrap.min.css" %}
     {% style "/assets/bootstrap/css/bootstrap-theme.min.css" %}
     {% style "/css/screen.css" %}
-
-    {% script "/assets/jquery/jquery.min.js" %}
-    {% script "/assets/bootstrap/js/bootstrap.min.js" %}
-    {% script "/assets/bootstrap/js/collapse.js" %}
 
     <script type="text/javascript">
       var context = "{{servlet-context}}";
