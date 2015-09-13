@@ -4,9 +4,12 @@ $(function () {
             type: 'column'
         },
         title: {
-            text: 'Среднее количество лайков за часы'
+            text: 'Среднее количество лайков по часам'
         },
         xAxis: {
+            title: {
+              text: 'Часы'
+            },
             categories: [
                 '00',
                 '01',
@@ -38,7 +41,7 @@ $(function () {
         yAxis: {
             min: 0,
             title: {
-                text: 'Likes'
+                text: 'Лайки'
             }
         },
         tooltip: {
