@@ -16,7 +16,10 @@ $(function () {
             },
             startOnTick: true,
             endOnTick: true,
-            showLastLabel: true
+            showLastLabel: true,
+            allowDecimals: false,
+            min: 0,
+            max: 23
         },
         yAxis: {
             title: {
