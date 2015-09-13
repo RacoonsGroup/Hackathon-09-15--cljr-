@@ -1,6 +1,7 @@
 $(function () {
+    scatter_data.forEach(function(elem){ elem[0] = +elem[0] });
     console.log(scatter_data)
-    $('#container').highcharts({
+    $('#container-for-scatter').highcharts({
         chart: {
             type: 'scatter',
             zoomType: 'xy'
@@ -15,7 +16,10 @@ $(function () {
             },
             startOnTick: true,
             endOnTick: true,
-            showLastLabel: true
+            showLastLabel: true,
+            allowDecimals: false,
+            min: 0,
+            max: 23
         },
         yAxis: {
             title: {
