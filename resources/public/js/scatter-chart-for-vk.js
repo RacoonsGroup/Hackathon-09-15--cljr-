@@ -24,7 +24,8 @@ $(function () {
         yAxis: {
             title: {
                 text: 'Лайки'
-            }
+            },
+            min: 0
         },
         plotOptions: {
             scatter: {
