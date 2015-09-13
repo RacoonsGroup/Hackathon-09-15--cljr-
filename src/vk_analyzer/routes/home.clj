@@ -8,11 +8,11 @@
             [clj-http.client :as client]))
 
 (defn get-wall [domain keywords]
-    (let [api-data (vk-api/get-wall {:domain domain :count 500})]
+    (let [api-data (vk-api/get-wall {:domain domain :count 500 :filter "owner"})]
     (layout/render "analyze-likes.html" {:data (charts/analyze-data api-data) :scatter-data (charts/analyze-data-for-scatter api-data)})))
 
 (defn search-on-wall [domain keywords]
-    (let [api-data (vk-api/search-on-wall {:domain domain :count 500 :query keywords})]
+    (let [api-data (vk-api/search-on-wall {:domain domain :count 500 :query keywords :owners_only 1})]
     (layout/render "analyze-likes.html" {:data (charts/analyze-data api-data) :scatter-data (charts/analyze-data-for-scatter api-data)})))
 
 (defn home-page []
