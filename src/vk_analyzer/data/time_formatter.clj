@@ -4,7 +4,7 @@
         [clj-time.core :as time]
         [vk-analyzer.configs.global :as config]))
 
-(def hour-formatter (formatter/formatter "HH"))
+(def hour-formatter (formatter/formatter "H"))
 
 (defn get-hour [timestamp]
   ;  Учитывать временную зону
