@@ -29,7 +29,7 @@
       (let [times (/ (params :count) 100)
         data (vec (flatten (map 
                           (fn [x]
-                            (parse-response (get-body (api-path "wall.get" (prepare-params (merge params {:count 100}))))))
+                            (parse-response (get-body (api-path "wall.get" (prepare-params (merge params {:count 100 :offset (* x 100)}))))))
                           (range times))))]
         data
         )
