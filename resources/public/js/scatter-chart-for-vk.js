@@ -1,4 +1,5 @@
 $(function () {
+    scatter_data.forEach(function(elem){ elem[0] = +elem[0] });
     console.log(scatter_data)
     $('#container').highcharts({
         chart: {
